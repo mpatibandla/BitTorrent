@@ -1,4 +1,4 @@
-BitTorrent
-==========
+Bit-Torrent
+===========
 
-Bit Torrent Client 
+A client side bit torrent application

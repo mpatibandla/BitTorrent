@@ -1,0 +1,38 @@
+
+This is skeleton development for your BitTorrent (BT) client. 
+
+Included Files and Purpose
+
+bt_client.c   :   Main file where the control loop lives
+bt_setup.c    :   Contains setup code, such as parsing arguments
+bencode.c     :   Code for parsing bencoded torrent files
+bt_lib.c      :   Code for core functionality of bt
+
+bt_setup.h    :   Header file for setup
+bencode.h     :   Header file for bencode
+bt_lib.h      :   Header file for bt_lib
+
+Suggested Additional Files [and headers]
+
+bt_io.c[.h]   :   File for handing input output
+bt_sock.c[.h] :   File for handling socket and network issues
+
+parsetorrent().used to parse the .torrent for any particular file to be downloaded and retrieves
+
+Acceptpeer()--- to accept connections from the peers
+
+Connection().establishes connection between the peers on the given port numbers and identifies if handshake is established. Sending messages and reading the messages from the sender and receiver peer is also observed in the handshake.
+
+Getpeerhandshake().for connection establishment using the sha1,peer id and 20 byte message containing .BitTorrent Protocol. and .19.. Symmetric handshake is established by this function when both sender and receiver use these messages.
+
+Initialize_socket().For establishing socket connections between the peers.
+
+Implemented:
+Aimed to establish 1S-1N connection.
+Parsing of .torrent file is done.
+Handshake is done partially.
+bt-client.log file includes the entire logging functionality done.
+It includes the details of ports to which peers are connected at what time and the pieces that are sent.
+
+Entire code for logging and various message types is done.
+Do consider to have a look at them.
